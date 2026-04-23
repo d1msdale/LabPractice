@@ -72,7 +72,7 @@ namespace Practice.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Practices", (string)null);
+                    b.ToTable("Persons", (string)null);
                 });
 
             modelBuilder.Entity("Practice.Domain.Models.Contact", b =>

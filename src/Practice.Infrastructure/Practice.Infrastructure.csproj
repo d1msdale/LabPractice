@@ -22,6 +22,11 @@
 
     <ItemGroup>
       <Folder Include="Configuration\Entity\" />
+      <Folder Include="Migrations\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Migrations\20260423143645_InitMigration.Designer.cs" />
     </ItemGroup>
 
 </Project>

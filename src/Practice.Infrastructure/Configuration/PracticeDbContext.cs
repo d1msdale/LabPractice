@@ -6,7 +6,7 @@ namespace Practice.Infrastructure.Configuration;
 
 public class PracticeDbContext(DbContextOptions<PracticeDbContext> options) : DbContext(options)
 {
-    public DbSet<Person> Practices => Set<Person>();
+    public DbSet<Person> Persons => Set<Person>();
     public DbSet<Contact> Contacts => Set<Contact>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

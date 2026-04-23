@@ -12,7 +12,7 @@ using Practice.Infrastructure.Configuration;
 namespace Practice.Infrastructure.Migrations
 {
     [DbContext(typeof(PracticeDbContext))]
-    [Migration("20260423133059_InitMigration")]
+    [Migration("20260423143746_InitMigration")]
     partial class InitMigration
     {
         /// <inheritdoc />
@@ -75,7 +75,7 @@ namespace Practice.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Practices", (string)null);
+                    b.ToTable("Persons", (string)null);
                 });
 
             modelBuilder.Entity("Practice.Domain.Models.Contact", b =>

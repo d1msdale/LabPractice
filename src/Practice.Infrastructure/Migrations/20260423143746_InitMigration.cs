@@ -12,7 +12,7 @@ namespace Practice.Infrastructure.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Practices",
+                name: "Persons",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -23,7 +23,7 @@ namespace Practice.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Practices", x => x.Id);
+                    table.PrimaryKey("PK_Persons", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -40,9 +40,9 @@ namespace Practice.Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_Contacts", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Contacts_Practices_PersonId",
+                        name: "FK_Contacts_Persons_PersonId",
                         column: x => x.PersonId,
-                        principalTable: "Practices",
+                        principalTable: "Persons",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -60,7 +60,7 @@ namespace Practice.Infrastructure.Migrations
                 name: "Contacts");
 
             migrationBuilder.DropTable(
-                name: "Practices");
+                name: "Persons");
         }
     }
 }
