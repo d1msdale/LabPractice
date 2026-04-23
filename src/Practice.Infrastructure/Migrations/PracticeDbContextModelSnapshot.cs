@@ -32,7 +32,7 @@ namespace Practice.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<Guid>("PersonId")
+                    b.Property<Guid?>("PersonId")
                         .HasColumnType("uuid");
 
                     b.Property<string>("PhoneNumber")
@@ -47,7 +47,7 @@ namespace Practice.Infrastructure.Migrations
 
                     b.HasIndex("PersonId");
 
-                    b.ToTable("Contacts");
+                    b.ToTable("Contacts", (string)null);
                 });
 
             modelBuilder.Entity("Practice.Domain.Models.Person", b =>
@@ -72,7 +72,7 @@ namespace Practice.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Practices");
+                    b.ToTable("Practices", (string)null);
                 });
 
             modelBuilder.Entity("Practice.Domain.Models.Contact", b =>
@@ -80,8 +80,7 @@ namespace Practice.Infrastructure.Migrations
                     b.HasOne("Practice.Domain.Models.Person", "Person")
                         .WithMany("Contacts")
                         .HasForeignKey("PersonId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Person");
                 });

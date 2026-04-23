@@ -34,7 +34,7 @@ namespace Practice.Infrastructure.Migrations
                     PhoneNumber = table.Column<string>(type: "text", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
                     Surname = table.Column<string>(type: "text", nullable: false),
-                    PersonId = table.Column<Guid>(type: "uuid", nullable: false)
+                    PersonId = table.Column<Guid>(type: "uuid", nullable: true)
                 },
                 constraints: table =>
                 {

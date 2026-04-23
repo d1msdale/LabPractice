@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Practice.Domain.Models;
+﻿namespace Practice.Domain.Models;
 
 public class Contact
 {
@@ -8,5 +6,7 @@ public class Contact
     public string PhoneNumber { get; set; }
     public string Name { get; set; }
     public string Surname { get; set; }
-    public Person Person { get; set; }
+    public Person? Person { get; set; }
+    
+    public Guid? PersonId { get; set; }
 }
