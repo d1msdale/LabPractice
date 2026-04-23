@@ -1,4 +1,6 @@
-﻿namespace Practice.Domain.Models;
+﻿using System;
+
+namespace Practice.Domain.Models;
 
 public class Contact
 {
