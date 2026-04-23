@@ -1,6 +1,5 @@
-using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
+using Practice.Application.Extensions;
 using Practice.Infrastructure.Configuration;
 using Practice.Infrastructure.Extensions;
 
@@ -8,7 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOpenApi();
 
-builder.Services.ConfigureDatabase(builder.Configuration);
+builder.Services.ConfigureDatabase(builder.Configuration)
+    .ConfigureApplication();
 
 builder.Services.AddControllers();
 
