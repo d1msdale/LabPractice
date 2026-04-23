@@ -1,16 +1,14 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Practice.Infrastructure.Configuration;
+using Practice.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOpenApi();
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-
-builder.Services.AddDbContext<PracticeDbContext>(options => { options.UseNpgsql(connectionString); });
+builder.Services.ConfigureDatabase(builder.Configuration);
 
 builder.Services.AddControllers();
 

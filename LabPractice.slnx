@@ -4,6 +4,7 @@
     </Folder>
     <Folder Name="/src/">
         <Project Path="src/Practice.Api/Practice.Api.csproj" />
+        <Project Path="src/Practice.Application/Practice.Application.csproj" />
         <Project Path="src/Practice.Domain/Practice.Domain.csproj" />
     <Project Path="src/Practice.Infrastructure/Practice.Infrastructure.csproj" />
     </Folder>

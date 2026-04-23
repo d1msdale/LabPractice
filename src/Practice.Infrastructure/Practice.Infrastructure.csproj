@@ -16,6 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Practice.Application\Practice.Application.csproj" />
       <ProjectReference Include="..\Practice.Domain\Practice.Domain.csproj" />
     </ItemGroup>
 
