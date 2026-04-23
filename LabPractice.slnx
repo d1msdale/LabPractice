@@ -1,0 +1,13 @@
+<Solution>
+    <Folder Name="/Solution Items/">
+        <File Path="compose.yaml" />
+    </Folder>
+    <Folder Name="/src/">
+        <Project Path="src/Practice.Api/Practice.Api.csproj" />
+        <Project Path="src/Practice.Domain/Practice.Domain.csproj" />
+    <Project Path="src/Practice.Infrastructure/Practice.Infrastructure.csproj" />
+    </Folder>
+    <Folder Name="/test/">
+        <Project Path="test/Project.Tests/Project.Tests.csproj" />
+    </Folder>
+</Solution>
